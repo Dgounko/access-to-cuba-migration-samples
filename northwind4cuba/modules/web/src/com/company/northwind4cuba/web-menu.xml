@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-northwind4cuba" insertBefore="administration">
+    <menu id="application-northwind4cuba"
+          insertBefore="administration">
+        <item screen="northwind4cuba$Customer.browse"/>
+        <item screen="northwind4cuba$Employee.browse"/>
+        <item screen="northwind4cuba$InventoryTransaction.browse"/>
+        <item screen="northwind4cuba$InventoryTransactionType.browse"/>
+        <item screen="northwind4cuba$Invoice.browse"/>
+        <item screen="northwind4cuba$OrdersStatus.browse"/>
+        <item screen="northwind4cuba$OrdersTaxStatus.browse"/>
+        <item screen="northwind4cuba$Order.browse"/>
+        <item screen="northwind4cuba$OrderDetails.browse"/>
+        <item screen="northwind4cuba$OrderDetailsStatus.browse"/>
+        <item screen="northwind4cuba$Privilege.browse"/>
+        <item screen="northwind4cuba$Product.browse"/>
+        <item screen="northwind4cuba$PurchaseOrder.browse"/>
+        <item screen="northwind4cuba$PurchaseOrderDetails.browse"/>
+        <item screen="northwind4cuba$PurchaseOrderStatus.browse"/>
+        <item screen="northwind4cuba$SalesReport.browse"/>
+        <item screen="northwind4cuba$Shipper.browse"/>
+        <item screen="northwind4cuba$Supplier.browse"/>
     </menu>
 </menu-config>

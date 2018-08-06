@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.inventorytransaction.InventoryTransactionBrowse"
+        focusComponent="inventoryTransactionsTable"
+        lookupComponent="inventoryTransactionsTable"
+        messagesPack="com.company.northwind4cuba.web.inventorytransaction">
+    <dsContext>
+        <groupDatasource id="inventoryTransactionsDs"
+                         class="com.company.northwind4cuba.entity.InventoryTransaction"
+                         view="InventoryTransaction-screen-view">
+            <query>
+                <![CDATA[select e from northwind4cuba$InventoryTransaction e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="inventoryTransactionsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="inventoryTransactionsTable"
+                datasource="inventoryTransactionsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="inventoryTransactionsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="transactionType"/>
+                <column id="transactionCreatedDate"/>
+                <column id="transactionModifiedDate"/>
+                <column id="product"/>
+                <column id="quantity"/>
+                <column id="purchaseOrder"/>
+                <column id="customerOrder"/>
+                <column id="comments"/>
+            </columns>
+            <rows datasource="inventoryTransactionsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="inventoryTransactionsTable.create"/>
+                <button id="editBtn"
+                        action="inventoryTransactionsTable.edit"/>
+                <button id="removeBtn"
+                        action="inventoryTransactionsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

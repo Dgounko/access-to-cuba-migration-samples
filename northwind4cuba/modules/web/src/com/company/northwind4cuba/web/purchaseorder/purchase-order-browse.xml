@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.purchaseorder.PurchaseOrderBrowse"
+        focusComponent="purchaseOrdersTable"
+        lookupComponent="purchaseOrdersTable"
+        messagesPack="com.company.northwind4cuba.web.purchaseorder">
+    <dsContext>
+        <groupDatasource id="purchaseOrdersDs"
+                         class="com.company.northwind4cuba.entity.PurchaseOrder"
+                         view="PurchaseOrder-screen-view">
+            <query>
+                <![CDATA[select e from northwind4cuba$PurchaseOrder e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="purchaseOrdersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="purchaseOrdersTable"
+                datasource="purchaseOrdersDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="purchaseOrdersTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="supplier"/>
+                <column id="createdBy1"/>
+                <column id="submittedDate"/>
+                <column id="creationDate"/>
+                <column id="status"/>
+                <column id="expectedDate"/>
+                <column id="shippingFee"/>
+                <column id="taxes"/>
+                <column id="paymentDate"/>
+                <column id="paymentAmount"/>
+                <column id="paymentMethod"/>
+                <column id="notes"/>
+                <column id="approvedBy"/>
+                <column id="approvedDate"/>
+                <column id="submittedBy"/>
+            </columns>
+            <rows datasource="purchaseOrdersDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="purchaseOrdersTable.create"/>
+                <button id="editBtn"
+                        action="purchaseOrdersTable.edit"/>
+                <button id="removeBtn"
+                        action="purchaseOrdersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

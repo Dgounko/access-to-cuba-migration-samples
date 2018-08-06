@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
-    <persistence-unit name="northwind4cuba" transaction-type="RESOURCE_LOCAL">
-
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="northwind4cuba"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>com.company.northwind4cuba.entity.Customer</class>
+        <class>com.company.northwind4cuba.entity.Employee</class>
+        <class>com.company.northwind4cuba.entity.InventoryTransaction</class>
+        <class>com.company.northwind4cuba.entity.InventoryTransactionType</class>
+        <class>com.company.northwind4cuba.entity.Invoice</class>
+        <class>com.company.northwind4cuba.entity.OrdersStatus</class>
+        <class>com.company.northwind4cuba.entity.OrdersTaxStatus</class>
+        <class>com.company.northwind4cuba.entity.Order</class>
+        <class>com.company.northwind4cuba.entity.OrderDetails</class>
+        <class>com.company.northwind4cuba.entity.OrderDetailsStatus</class>
+        <class>com.company.northwind4cuba.entity.Privilege</class>
+        <class>com.company.northwind4cuba.entity.Product</class>
+        <class>com.company.northwind4cuba.entity.PurchaseOrder</class>
+        <class>com.company.northwind4cuba.entity.PurchaseOrderDetails</class>
+        <class>com.company.northwind4cuba.entity.PurchaseOrderStatus</class>
+        <class>com.company.northwind4cuba.entity.SalesReport</class>
+        <class>com.company.northwind4cuba.entity.Shipper</class>
+        <class>com.company.northwind4cuba.entity.StringMessage</class>
+        <class>com.company.northwind4cuba.entity.Supplier</class>
     </persistence-unit>
 </persistence>

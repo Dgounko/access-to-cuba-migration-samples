@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.northwind4cuba.web.salesreport.SalesReportEdit"
+        datasource="salesReportDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.northwind4cuba.web.salesreport">
+    <dsContext>
+        <datasource id="salesReportDs"
+                    class="com.company.northwind4cuba.entity.SalesReport"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="salesReportDs">
+            <column width="250px">
+                <field property="display"/>
+                <field property="title"/>
+                <field property="filterRowSource"
+                       rows="5"/>
+                <field property="_default"/>
+                <field property="groupBy"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

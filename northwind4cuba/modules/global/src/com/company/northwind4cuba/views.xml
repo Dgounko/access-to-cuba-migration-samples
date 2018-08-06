@@ -1,4 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
+    <view class="com.company.northwind4cuba.entity.InventoryTransaction"
+          extends="_local"
+          name="InventoryTransaction-screen-view">
+        <property name="transactionType"
+                  view="_minimal"/>
+        <property name="product"
+                  view="_minimal"/>
+        <property name="purchaseOrder"
+                  view="_minimal"/>
+        <property name="customerOrder"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.northwind4cuba.entity.Invoice"
+          extends="_local"
+          name="Invoice-screen-view">
+        <property name="order"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.northwind4cuba.entity.Order"
+          extends="_local"
+          name="Order-screen-view">
+        <property name="employee"
+                  view="_minimal"/>
+        <property name="customer"
+                  view="_minimal"/>
+        <property name="shipper"
+                  view="_minimal"/>
+        <property name="taxStatus"
+                  view="_minimal"/>
+        <property name="status"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.northwind4cuba.entity.OrderDetails"
+          extends="_local"
+          name="OrderDetails-screen-view">
+        <property name="order"
+                  view="_minimal"/>
+        <property name="product"
+                  view="_minimal"/>
+        <property name="status"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.northwind4cuba.entity.PurchaseOrder"
+          extends="_local"
+          name="PurchaseOrder-screen-view">
+        <property name="supplier"
+                  view="_minimal"/>
+        <property name="createdBy1"
+                  view="_minimal"/>
+        <property name="status"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.northwind4cuba.entity.PurchaseOrderDetails"
+          extends="_local"
+          name="PurchaseOrderDetails-screen-view">
+        <property name="purchaseOrder"
+                  view="_minimal"/>
+        <property name="product"
+                  view="_minimal"/>
+        <property name="inventory"
+                  view="_minimal"/>
+    </view>
 </views>

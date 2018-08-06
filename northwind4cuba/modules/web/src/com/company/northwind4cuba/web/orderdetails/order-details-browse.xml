@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.orderdetails.OrderDetailsBrowse"
+        focusComponent="orderDetailsesTable"
+        lookupComponent="orderDetailsesTable"
+        messagesPack="com.company.northwind4cuba.web.orderdetails">
+    <dsContext>
+        <groupDatasource id="orderDetailsesDs"
+                         class="com.company.northwind4cuba.entity.OrderDetails"
+                         view="OrderDetails-screen-view">
+            <query>
+                <![CDATA[select e from northwind4cuba$OrderDetails e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="orderDetailsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="orderDetailsesTable"
+                datasource="orderDetailsesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="orderDetailsesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="order"/>
+                <column id="product"/>
+                <column id="quantity"/>
+                <column id="unitPrice"/>
+                <column id="discount"/>
+                <column id="status"/>
+                <column id="dateAllocated"/>
+                <column id="purchaseOrder"/>
+                <column id="inventory"/>
+            </columns>
+            <rows datasource="orderDetailsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="orderDetailsesTable.create"/>
+                <button id="editBtn"
+                        action="orderDetailsesTable.edit"/>
+                <button id="removeBtn"
+                        action="orderDetailsesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

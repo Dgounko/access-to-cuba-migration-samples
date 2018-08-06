@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.northwind4cuba.web.shipper.ShipperEdit"
+        datasource="shipperDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.northwind4cuba.web.shipper">
+    <dsContext>
+        <datasource id="shipperDs"
+                    class="com.company.northwind4cuba.entity.Shipper"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="scrollBox"
+            spacing="true">
+        <scrollBox id="scrollBox"
+                   spacing="true">
+            <fieldGroup id="fieldGroup"
+                        datasource="shipperDs">
+                <column width="250px">
+                    <field property="company"/>
+                    <field property="lastName"/>
+                    <field property="firstName"/>
+                    <field property="eMailAddress"/>
+                    <field property="jobTitle"/>
+                    <field property="businessPhone"/>
+                    <field property="homePhone"/>
+                    <field property="mobilePhone"/>
+                    <field property="faxNumber"/>
+                    <field property="address"
+                           rows="5"/>
+                    <field property="city"/>
+                    <field property="stateProvince"/>
+                    <field property="zipPostalCode"/>
+                    <field property="countryRegion"/>
+                    <field property="webPage"
+                           rows="5"/>
+                    <field property="notes"
+                           rows="5"/>
+                    <field property="attachments"/>
+                </column>
+            </fieldGroup>
+        </scrollBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

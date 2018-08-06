@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.salesreport.SalesReportBrowse"
+        focusComponent="salesReportsTable"
+        lookupComponent="salesReportsTable"
+        messagesPack="com.company.northwind4cuba.web.salesreport">
+    <dsContext>
+        <groupDatasource id="salesReportsDs"
+                         class="com.company.northwind4cuba.entity.SalesReport"
+                         view="_local">
+            <query>
+                <![CDATA[select e from northwind4cuba$SalesReport e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="salesReportsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="salesReportsTable"
+                datasource="salesReportsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="salesReportsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="display"/>
+                <column id="title"/>
+                <column id="filterRowSource"/>
+                <column id="_default"/>
+                <column id="groupBy"/>
+            </columns>
+            <rows datasource="salesReportsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="salesReportsTable.create"/>
+                <button id="editBtn"
+                        action="salesReportsTable.edit"/>
+                <button id="removeBtn"
+                        action="salesReportsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

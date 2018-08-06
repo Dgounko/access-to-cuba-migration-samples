@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.inventorytransactiontype.InventoryTransactionTypeBrowse"
+        focusComponent="inventoryTransactionTypesTable"
+        lookupComponent="inventoryTransactionTypesTable"
+        messagesPack="com.company.northwind4cuba.web.inventorytransactiontype">
+    <dsContext>
+        <groupDatasource id="inventoryTransactionTypesDs"
+                         class="com.company.northwind4cuba.entity.InventoryTransactionType"
+                         view="_local">
+            <query>
+                <![CDATA[select e from northwind4cuba$InventoryTransactionType e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="inventoryTransactionTypesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="inventoryTransactionTypesTable"
+                datasource="inventoryTransactionTypesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="inventoryTransactionTypesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="typeName"/>
+            </columns>
+            <rows datasource="inventoryTransactionTypesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="inventoryTransactionTypesTable.create"/>
+                <button id="editBtn"
+                        action="inventoryTransactionTypesTable.edit"/>
+                <button id="removeBtn"
+                        action="inventoryTransactionTypesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.northwind4cuba.web.purchaseorderdetails.PurchaseOrderDetailsEdit"
+        datasource="purchaseOrderDetailsDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.northwind4cuba.web.purchaseorderdetails">
+    <dsContext>
+        <datasource id="purchaseOrderDetailsDs"
+                    class="com.company.northwind4cuba.entity.PurchaseOrderDetails"
+                    view="PurchaseOrderDetails-screen-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="purchaseOrderDetailsDs">
+            <column width="250px">
+                <field property="purchaseOrder"/>
+                <field property="product"/>
+                <field property="quantity"/>
+                <field property="unitCost"/>
+                <field property="dateReceived"/>
+                <field property="postedToInventory"/>
+                <field property="inventory"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

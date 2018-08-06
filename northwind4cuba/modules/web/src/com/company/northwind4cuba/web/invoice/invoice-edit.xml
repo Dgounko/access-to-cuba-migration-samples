@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.northwind4cuba.web.invoice.InvoiceEdit"
+        datasource="invoiceDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.northwind4cuba.web.invoice">
+    <dsContext>
+        <datasource id="invoiceDs"
+                    class="com.company.northwind4cuba.entity.Invoice"
+                    view="Invoice-screen-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="invoiceDs">
+            <column width="250px">
+                <field property="order"/>
+                <field property="invoiceDate"/>
+                <field property="dueDate"/>
+                <field property="tax"/>
+                <field property="shipping"/>
+                <field property="amountDue"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

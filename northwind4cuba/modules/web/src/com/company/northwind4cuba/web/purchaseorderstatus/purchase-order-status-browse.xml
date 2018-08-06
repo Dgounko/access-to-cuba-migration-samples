@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.purchaseorderstatus.PurchaseOrderStatusBrowse"
+        focusComponent="purchaseOrderStatusesTable"
+        lookupComponent="purchaseOrderStatusesTable"
+        messagesPack="com.company.northwind4cuba.web.purchaseorderstatus">
+    <dsContext>
+        <groupDatasource id="purchaseOrderStatusesDs"
+                         class="com.company.northwind4cuba.entity.PurchaseOrderStatus"
+                         view="_local">
+            <query>
+                <![CDATA[select e from northwind4cuba$PurchaseOrderStatus e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="purchaseOrderStatusesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="purchaseOrderStatusesTable"
+                datasource="purchaseOrderStatusesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="purchaseOrderStatusesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="status"/>
+            </columns>
+            <rows datasource="purchaseOrderStatusesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="purchaseOrderStatusesTable.create"/>
+                <button id="editBtn"
+                        action="purchaseOrderStatusesTable.edit"/>
+                <button id="removeBtn"
+                        action="purchaseOrderStatusesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.northwind4cuba.web.orderdetailsstatus.OrderDetailsStatusEdit"
+        datasource="orderDetailsStatusDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.northwind4cuba.web.orderdetailsstatus">
+    <dsContext>
+        <datasource id="orderDetailsStatusDs"
+                    class="com.company.northwind4cuba.entity.OrderDetailsStatus"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="orderDetailsStatusDs">
+            <column width="250px">
+                <field property="statusName"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

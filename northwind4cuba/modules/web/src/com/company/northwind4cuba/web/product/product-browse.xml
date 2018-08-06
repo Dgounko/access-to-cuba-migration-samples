@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.northwind4cuba.web.product.ProductBrowse"
+        focusComponent="productsTable"
+        lookupComponent="productsTable"
+        messagesPack="com.company.northwind4cuba.web.product">
+    <dsContext>
+        <groupDatasource id="productsDs"
+                         class="com.company.northwind4cuba.entity.Product"
+                         view="_local">
+            <query>
+                <![CDATA[select e from northwind4cuba$Product e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="productsTable"
+                datasource="productsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="productsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="supplierIds"/>
+                <column id="productCode"/>
+                <column id="productName"/>
+                <column id="description"/>
+                <column id="standardCost"/>
+                <column id="listPrice"/>
+                <column id="reorderLevel"/>
+                <column id="targetLevel"/>
+                <column id="quantityPerUnit"/>
+                <column id="discontinued"/>
+                <column id="minimumReorderQuantity"/>
+                <column id="category"/>
+                <column id="attachments"/>
+            </columns>
+            <rows datasource="productsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="productsTable.create"/>
+                <button id="editBtn"
+                        action="productsTable.edit"/>
+                <button id="removeBtn"
+                        action="productsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
