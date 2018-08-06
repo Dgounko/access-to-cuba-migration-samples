@@ -35,10 +35,12 @@ Public Function convert()
     Next
     
     Dim msgText As String
-    msgText = "Preparation for CUBA platform import was finished"
-    msgText = msgText & vbCrLf & "Tables renamed: " + CStr(tablesRenamed)
-    msgText = msgText & vbCrLf & "Fields renamed: " + CStr(fieldsRenamed)
-    msgText = msgText & vbCrLf & "Indexes renamed: " + CStr(indexesRenamed)
+    msgText = "Preparation for CUBA platform import was finished" & _
+        vbCrLf & "Tables renamed: " + CStr(tablesRenamed) & _
+        vbCrLf & "Fields renamed: " & CStr(fieldsRenamed) & _
+        vbCrLf & "Indexes renamed: " + CStr(indexesRenamed) & _
+        vbCrLf & vbCrLf & _
+        "DO NOT FORGET to change DB table names from PLURAL TO SINGULAR form!"
     
     MsgBox msgText, vbOKOnly, "Conversion is completed"
     

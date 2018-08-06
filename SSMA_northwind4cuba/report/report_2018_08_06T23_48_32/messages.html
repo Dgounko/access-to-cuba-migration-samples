@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <Meta content="IE=EmulateIE9" http-equiv="X-UA-Compatible"></Meta>
+    <Meta content="text/html;charset=UTF-8" http-equiv="Content-Type"></Meta>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/messages.js"></script>
+    <link media="all" rel="stylesheet" type="text/css" href="css/messages.css"></link>
+  </head>
+  <body STYLE="width:100%;" onload="javascript:init();reloadSavedRequisites();" scroll="no" onresize="buttonStatusReset();init();">
+    <table width="100%" height="10px" cellpadding="0" cellspacing="0">
+      <tr valign="middle">
+        <td align="center">
+          <table width="52px" height="9px" cellpadding="0" cellspacing="0" style="cursor:pointer; background-repeat: no-repeat" onmouseover="this.style.backgroundImage='url(img/expander_button.gif)';" onmouseout="this.style.backgroundImage='none';" onclick="this.style.backgroundImage='none';Expand()">
+            <tr valign="middle">
+              <td id="expander_td" name="expander_td" style="cursor:pointer; background-repeat: no-repeat; background-position:center; background-image: url('img/expander_arrow_down.gif')"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div id="mainDiv" STYLE="height:100%;width:100%;">
+      <div class="panel">
+        <ul class="add-nav">
+          <li>
+            <a onclick="changeButton(1);" role="button" href="#" aria-label="Display error conversion messages">
+              <span class="selectedTab" id="errors">
+                <img src="img/error.gif" width="14" height="14"></img>
+                <span id="espan">Error (6)</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a onclick="changeButton(2);" role="button" href="#" aria-label="Display warning conversion messages">
+              <span class="unSelectedTab" id="warnings">
+                <img src="img/warning.gif" width="14" height="14"></img>
+                <span id="wspan">Warning (11)</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a onclick="changeButton(3);" role="button" href="#" aria-label="Display informational conversion messages">
+              <span class="unSelectedTab" id="infos">
+                <img src="img/info.gif" width="14" height="14"></img>
+                <span id="ispan">Info (233)</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <span style="top:8px; position:absolute;width:400px;font-family:Arial;font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total estimated manual conversion time:
+          <span style="color:firebrick;top:0px; position:absolute;" id="etime">6.5 hr(s)</span>
+        </span>
+      </div>
+      <div id="innerDiv" style="HEIGHT: 194px; OVERFLOW-Y: auto">
+        <div id="errorDiv" style="DISPLAY: block">
+          <table dataSrc="#errorData" id="errorTable" class="selectedTable">
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0070 : Datatype is not supported (6), estimated manual conversion time: 3 hr(s), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/error.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0070</span>
+                    : Datatype is not supported (6), estimated manual conversion time: 3 hr(s)</span>
+                  <span dataFld="name" style="DISPLAY: none">1</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('087b7d94-70f3-4008-8e41-28532743c6e4',3);changeSelection(this);">
+                                <img src="img/table_error.gif"></img>
+                                SHIPPER (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('381b2d33-2e60-47c6-888b-ecb87d705c39',3);changeSelection(this);">
+                                <img src="img/table_error.gif"></img>
+                                PRODUCT (2), estimated manual conversion time: 1 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('63fd4d66-ab2b-42e3-ad11-fbe29813f900',3);changeSelection(this);">
+                                <img src="img/table_error.gif"></img>
+                                CUSTOMER (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f266136d-bb45-4aac-8598-ea0773d59b05',3);changeSelection(this);">
+                                <img src="img/table_error.gif"></img>
+                                SUPPLIER (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f6686748-e8a4-47f8-8fa5-3d4cc624f665',3);changeSelection(this);">
+                                <img src="img/table_error.gif"></img>
+                                EMPLOYEE (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="warningDiv" style="DISPLAY: block">
+          <table dataSrc="#warningData" id="warningTable" class="unSelectedTable">
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0016 : Primary key column is nullable (7), estimated manual conversion time: 3.5 hr(s), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/warning.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0016</span>
+                    : Primary key column is nullable (7), estimated manual conversion time: 3.5 hr(s)</span>
+                  <span dataFld="name" style="DISPLAY: none">1</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('0d337655-1f23-4f80-8e38-87cc287dc4be',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                INVENTORY_TRANSACTION_TYPE (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('0edc3613-3500-4a46-9b24-6ab53b7ba87b',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                EMPLOYEE_PRIVILEGES (2), estimated manual conversion time: 1 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('3f90af5b-07f1-4527-b335-88b4d2d15631',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                ORDER_DETAILS_STATUS (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4dd1edc8-4e78-47eb-8731-536334168773',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                PURCHASE_ORDER_STATUS (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('9d4e8b3e-c877-4cf1-a347-bb4f1438ecc9',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                ORDERS_TAX_STATUS (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c26a77f5-dda9-449a-8af3-0265a23b78d0',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                ORDERS_STATUS (1), estimated manual conversion time: 0.5 hr(s)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0021 : Hyperlink column converted to text (4), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/warning.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0021</span>
+                    : Hyperlink column converted to text (4)</span>
+                  <span dataFld="name" style="DISPLAY: none">2</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('087b7d94-70f3-4008-8e41-28532743c6e4',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                SHIPPER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('63fd4d66-ab2b-42e3-ad11-fbe29813f900',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                CUSTOMER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f266136d-bb45-4aac-8598-ea0773d59b05',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                SUPPLIER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f6686748-e8a4-47f8-8fa5-3d4cc624f665',3);changeSelection(this);">
+                                <img src="img/table_warning.gif"></img>
+                                EMPLOYEE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="infoDiv" style="DISPLAY: block">
+          <table dataSrc="#infoData" id="infoTable" class="unSelectedTable">
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0005 : Zero-length-not-allowed flag converted (91), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/info.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0005</span>
+                    : Zero-length-not-allowed flag converted (91)</span>
+                  <span dataFld="name" style="DISPLAY: none">2</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('087b7d94-70f3-4008-8e41-28532743c6e4',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SHIPPER (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('0d337655-1f23-4f80-8e38-87cc287dc4be',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                INVENTORY_TRANSACTION_TYPE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1d648917-2205-4ad5-95d5-895b94530f08',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                INVENTORY_TRANSACTION (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1e02d05e-1cb5-4554-90b1-ac1ee6891e3a',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_ (8)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1f1b3301-fd4f-45d9-8a7f-42aec7f79f01',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PRIVILEGE_ (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('381b2d33-2e60-47c6-888b-ecb87d705c39',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PRODUCT (5)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('3f90af5b-07f1-4527-b335-88b4d2d15631',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_DETAILS_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4c23a9f9-f790-4ec5-8950-36fb79b33630',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SALES_REPORT (4)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4dd1edc8-4e78-47eb-8731-536334168773',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('63fd4d66-ab2b-42e3-ad11-fbe29813f900',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                CUSTOMER (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('9d4e8b3e-c877-4cf1-a347-bb4f1438ecc9',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDERS_TAX_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c26a77f5-dda9-449a-8af3-0265a23b78d0',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDERS_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c29be6bd-eeee-47cc-8c59-80c0cde3ae17',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER (2)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('cbeeb798-f15d-4468-aca1-591dcb76a1b4',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                STRING_MESSAGE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f266136d-bb45-4aac-8598-ea0773d59b05',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SUPPLIER (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f6686748-e8a4-47f8-8fa5-3d4cc624f665',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                EMPLOYEE (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0020 : New timestamp column created (10), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/info.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0020</span>
+                    : New timestamp column created (10)</span>
+                  <span dataFld="name" style="DISPLAY: none">3</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('087b7d94-70f3-4008-8e41-28532743c6e4',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SHIPPER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1e02d05e-1cb5-4554-90b1-ac1ee6891e3a',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_ (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('214c9565-a250-4e64-8b1d-9c049024dadb',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_DETAILS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('381b2d33-2e60-47c6-888b-ecb87d705c39',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PRODUCT (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4c23a9f9-f790-4ec5-8950-36fb79b33630',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SALES_REPORT (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('63fd4d66-ab2b-42e3-ad11-fbe29813f900',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                CUSTOMER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('9ca3483c-8c25-4544-b240-6856d37a5b6d',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER_DETAILS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c29be6bd-eeee-47cc-8c59-80c0cde3ae17',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f266136d-bb45-4aac-8598-ea0773d59b05',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SUPPLIER (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f6686748-e8a4-47f8-8fa5-3d4cc624f665',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                EMPLOYEE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>&nbsp;
+                  <a onclick="toggle(this)" href="#" class="expander-link" role="button" aria-label="A2SS0029 : Identifier name was changed (132), collapsed, press Enter to expand">
+                    <img class="tableMinusIcons" src="img/nolines_plus.gif"></img>
+                  </a>
+                  <img class="tableIcons" src="img/info.gif"></img>
+                  &nbsp;
+                  <span dataFld="description">
+                    <span>A2SS0029</span>
+                    : Identifier name was changed (132)</span>
+                  <span dataFld="name" style="DISPLAY: none">4</span>
+                  <table style="DISPLAY: none">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('087b7d94-70f3-4008-8e41-28532743c6e4',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SHIPPER (7)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('0d337655-1f23-4f80-8e38-87cc287dc4be',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                INVENTORY_TRANSACTION_TYPE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('0edc3613-3500-4a46-9b24-6ab53b7ba87b',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                EMPLOYEE_PRIVILEGES (8)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1d648917-2205-4ad5-95d5-895b94530f08',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                INVENTORY_TRANSACTION (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1e02d05e-1cb5-4554-90b1-ac1ee6891e3a',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_ (22)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('1f1b3301-fd4f-45d9-8a7f-42aec7f79f01',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PRIVILEGE_ (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('214c9565-a250-4e64-8b1d-9c049024dadb',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_DETAILS (16)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('381b2d33-2e60-47c6-888b-ecb87d705c39',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PRODUCT (2)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('3f90af5b-07f1-4527-b335-88b4d2d15631',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDER_DETAILS_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4382a7c4-a48e-4e8c-8712-f126ab4c6a81',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                INVOICE (5)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4c23a9f9-f790-4ec5-8950-36fb79b33630',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SALES_REPORT (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('4dd1edc8-4e78-47eb-8731-536334168773',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('63fd4d66-ab2b-42e3-ad11-fbe29813f900',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                CUSTOMER (7)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('9ca3483c-8c25-4544-b240-6856d37a5b6d',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER_DETAILS (14)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('9d4e8b3e-c877-4cf1-a347-bb4f1438ecc9',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDERS_TAX_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c26a77f5-dda9-449a-8af3-0265a23b78d0',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                ORDERS_STATUS (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('c29be6bd-eeee-47cc-8c59-80c0cde3ae17',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                PURCHASE_ORDER (13)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('cbeeb798-f15d-4468-aca1-591dcb76a1b4',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                STRING_MESSAGE (1)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f266136d-bb45-4aac-8598-ea0773d59b05',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                SUPPLIER (7)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                            <div style="CURSOR: pointer; POSITION: relative; LEFT: 43px">
+                              <a href="#" role="button" onclick="pathTo('f6686748-e8a4-47f8-8fa5-3d4cc624f665',3);changeSelection(this);">
+                                <img src="img/table_info.gif"></img>
+                                EMPLOYEE (7)</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
