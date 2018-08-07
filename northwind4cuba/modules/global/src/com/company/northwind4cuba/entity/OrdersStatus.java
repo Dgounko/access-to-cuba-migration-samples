@@ -7,7 +7,9 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.global.DesignSupport;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s|statusName")
 @DesignSupport("{'imported':true}")
 @AttributeOverrides({
         @AttributeOverride(name = "id", column = @Column(name = "STATUS_ID"))

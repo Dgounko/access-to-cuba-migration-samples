@@ -6,7 +6,9 @@ import com.haulmont.cuba.core.global.DesignSupport;
 import javax.persistence.Column;
 import javax.persistence.Lob;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s %s (%s)|firstName,lastName,company")
 @DesignSupport("{'imported':true}")
 @Table(name = "SUPPLIER")
 @Entity(name = "northwind4cuba$Supplier")

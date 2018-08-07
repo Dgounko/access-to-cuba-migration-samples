@@ -14,7 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s : %s|id,amountDue")
 @DesignSupport("{'imported':true}")
 @AttributeOverrides({
         @AttributeOverride(name = "id", column = @Column(name = "INVOICE_ID"))

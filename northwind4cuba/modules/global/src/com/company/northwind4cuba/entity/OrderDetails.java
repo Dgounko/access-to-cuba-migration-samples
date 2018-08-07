@@ -12,7 +12,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s : %s|product,quantity")
 @DesignSupport("{'imported':true}")
 @Table(name = "ORDER_DETAILS")
 @Entity(name = "northwind4cuba$OrderDetails")

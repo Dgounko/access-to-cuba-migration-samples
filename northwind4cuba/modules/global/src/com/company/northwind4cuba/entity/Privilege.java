@@ -11,7 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s|privilegeName")
 @DesignSupport("{'imported':true}")
 @AttributeOverrides({
         @AttributeOverride(name = "id", column = @Column(name = "PRIVILEGE_ID"))

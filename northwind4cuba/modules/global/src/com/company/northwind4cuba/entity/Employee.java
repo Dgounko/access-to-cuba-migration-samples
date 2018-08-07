@@ -10,7 +10,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s %s / %s|firstName,lastName,jobTitle")
 @DesignSupport("{'imported':true}")
 @Table(name = "EMPLOYEE")
 @Entity(name = "northwind4cuba$Employee")

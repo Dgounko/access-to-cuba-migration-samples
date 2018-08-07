@@ -5,7 +5,9 @@ import javax.persistence.Table;
 import com.haulmont.cuba.core.global.DesignSupport;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.entity.BaseIntegerIdEntity;
+import com.haulmont.chile.core.annotations.NamePattern;
 
+@NamePattern("%s|typeName")
 @DesignSupport("{'imported':true}")
 @Table(name = "INVENTORY_TRANSACTION_TYPE")
 @Entity(name = "northwind4cuba$InventoryTransactionType")

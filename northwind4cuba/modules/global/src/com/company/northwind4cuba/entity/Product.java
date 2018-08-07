@@ -10,7 +10,7 @@ import javax.persistence.Lob;
 import com.haulmont.cuba.core.entity.BaseIntIdentityIdEntity;
 
 @DesignSupport("{'imported':true}")
-@NamePattern("%s|description")
+@NamePattern("%s|productName")
 @Table(name = "PRODUCT")
 @Entity(name = "northwind4cuba$Product")
 public class Product extends BaseIntIdentityIdEntity {
