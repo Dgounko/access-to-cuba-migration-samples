@@ -1,4 +1,4 @@
-Attribute VB_Name = "ConvertToCubaObjects"
+Attribute VB_Name = "Access2Cuba"
 Option Compare Database
 Option Explicit
 
