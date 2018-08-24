@@ -1,1 +1,7 @@
+title: Migrating MS Access applications to CUBA
+description: A guide for migration from legacy to CUBA
 theme: jekyll-theme-cayman
+show_downloads: true
+locale: en-US
+words_per_minute: 200
+repository: dyakonoff/access-to-cuba-migration-samples
