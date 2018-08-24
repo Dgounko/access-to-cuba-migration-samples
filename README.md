@@ -2,7 +2,8 @@
 
 ---
 
-Migration step-by-step guide could be found [here](https://github.com/dyakonoff/access-to-cuba-migration-samples/wiki).
+* Migration step-by-step guide could be found [here](https://github.com/dyakonoff/access-to-cuba-migration-samples/wiki).
+* Read this article at [github page](https://dyakonoff.github.io/access-to-cuba-migration-samples/) as well.
 
 ---
 
