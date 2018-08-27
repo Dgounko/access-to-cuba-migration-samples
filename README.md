@@ -24,7 +24,7 @@ Problems arise when Access databases grows beyond the needs of small teams and s
 1. **Flexibility**: a main approach of extending Access applications uses VBA language, which is somewhat outdated and unpopular.
 1. **Integration with external systems and services**: Access uses old-fashioned COM interfaces to talk with external systems. This makes a task of using modern REST web-services quite non-trivial.
 1. **Deployment and licensing**: Access requires MS Office to be installed for every user or he/she needs a remote desktop to a Windows Server running Access.
-1. **Logging and monitoring**: Access offers quite limited monitoring capabilities. It would be a real challenge if you’d need to integrate Access with something like [Zabbix](https://www.zabbix.com/), [Icinga](https://www.icinga.com/) or [Grafana](https://grafana.com/).
+1. **Logging and monitoring**: Access offers quite limited monitoring capabilities. It would be a real challenge if you’d need to integrate Access with something like [Zabbix](https://www.zabbix.com/), [Icinga](https://www.icinga.com/) or [Nagios](https://www.nagios.org/).
 1. **Development process**: as the development team grows it is getting harder and harder to collaborate. Such version control systems like git, tfs or mercurial hardly can be used with Access. It’s also not very easy to write unit, functional and integration tests for Access applications.
 
 ![dont-let-legacy-eat-you](https://github.com/dyakonoff/access-to-cuba-migration-samples/wiki/images/dont-let-legacy-eat-you.png)
