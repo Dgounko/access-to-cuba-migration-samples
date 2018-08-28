@@ -1,4 +1,5 @@
-# Migrating from MS Access to Java <br />_(with CUBA Platform )_
+# Migrating from MS Access to Java
+**(and how CUBA platforms helps to do this)**
 
 ---
 
